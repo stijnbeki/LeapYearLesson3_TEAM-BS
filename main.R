@@ -5,6 +5,7 @@
 ##clean working directory
 rm(list=ls())
 
+getwd()
 ####THE RULES OF LEAP YEARS
 ##1-Check if the input(x) is numeric, otherwise give warning
 ##2-Check if the input(x) is smaller than <1582, because since this year the modern day gregorian calendre was used.
@@ -14,33 +15,23 @@ rm(list=ls())
 ##5-leap years can be divded by 400 and give a round number
 ####
 
-source('Functions/LeapYear.R')
-source('Functions/LeapYearAdvanced.R')
+source('R/is.leap.R')
+source('R/is.leapAD.R')
 
 
 ####EXAMPLES#### SCRIPT 1
 is.leap(1500)
-
 is.leap(2000)
-
 is.leap(2001)
-
 is.leap(2004)
-
 is.leap(2100)
-
 is.leap("Jon")
 
 
 ####EXAMPLES####SCRIPT 2
 is.leapAD(1500)
-
 is.leapAD(2000)
-
 is.leapAD(2001)
-
 is.leapAD(2004)
-
 is.leapAD(2100)
-
 is.leapAD("Jon")
