@@ -40,7 +40,8 @@ is.leap <- function(x)
     leap <- warning('argument of class numeric expected')
     } 
 
-  
+    else
+      {
       ### 2- Check if it is not before 1582
       if (x < 1582) 
           {
@@ -70,7 +71,7 @@ is.leap <- function(x)
                         }
         
       }
-    } 
+    } }
   
   return(leap)
   
@@ -87,6 +88,8 @@ is.leap(2001)
 is.leap(2004)
 
 is.leap(2100)
+
+is.leap("Jon")
 
 
 
@@ -124,4 +127,6 @@ is.leapAD(2001)
 is.leapAD(2004)
 
 is.leapAD(2100)
+
+is.leapAD("Jon")
 
