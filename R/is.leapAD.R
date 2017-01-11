@@ -1,3 +1,5 @@
+###Team BS###
+#11-01-2017#
 is.leapAD=function(year){
   
   if (!is.numeric(year)) 

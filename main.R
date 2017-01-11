@@ -12,10 +12,12 @@ rm(list=ls())
 ##3-leap years can be divided by 4 and give a round number
 ##4-leap years can NOT be divided by 100 and give a round number
 ##5-leap years can be divded by 400 and give a round number
-####
 
-source('R/is.leap.R')
-source('R/is.leapAD.R')
+####The functions####
+
+source('R/is.leap.R')     ###This is the first script we made for this assignment, it has a lot of "if" and "ELSE" commands
+source('R/is.leapAD.R')   ###This is our newest more advance script, this calculates exactly the same in less code.
+
 
 
 ####EXAMPLES#### SCRIPT 1
