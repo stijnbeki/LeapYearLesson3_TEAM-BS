@@ -5,7 +5,6 @@
 ##clean working directory
 rm(list=ls())
 
-getwd()
 ####THE RULES OF LEAP YEARS
 ##1-Check if the input(x) is numeric, otherwise give warning
 ##2-Check if the input(x) is smaller than <1582, because since this year the modern day gregorian calendre was used.
