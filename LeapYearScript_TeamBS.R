@@ -14,36 +14,36 @@
 
 #function:
 
-leap <- function(x)
+is.leap <- function(x)
 ###check if the class is numeric###
   { 
+  
   if (!is.numeric(x)) {
-    leap <- sprintf('Object of class numeric expected for x')
+    leap <- warning('argument of class numeric expected')
   } 
 
+      if (x < 1582) {
+        leap <- sprintf(paste(x, 'is out of the valid range')) 
+                    } 
 ###check if it can be divided by 4###
     else{ 
-    if(leap_year <- (x/4)%%1 != 0){
-      leap <- sprintf(paste(x, 'is not a leap year'))
+    if((x/4)%%1 != 0){
+      leap <- FALSE
     }
-      else{
+      else
+        {
+        if ((x/100)%%1 == 0 & (x/400)%%1 != 0)
+        {
+         leap <- FALSE
+        }
+        else 
+        {
+          leap <- TRUE
+        }
         
       }
-###If it cannot be divided by 4 = NOT a leap year, otherwise check for /100 and /400.
-      
-      
-      
       } 
-  
-  
-  
-  
-  
   
   return(leap)
   
-  
-  
   }
-
-leap('piet')
