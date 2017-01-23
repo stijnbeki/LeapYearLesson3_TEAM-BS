@@ -2,7 +2,6 @@
 ###Geoscripting##
 ###23-01-17######
 
-
 #Loading the modules
 import os
 from osgeo import ogr, osr
@@ -11,7 +10,7 @@ from osgeo import ogr, osr
 #os.chdir('./data')
 
 ## Is the ESRI Shapefile driver available?
-driverName = "ESRI Shapefile"
+driverName = "GeoJSON"
 drv = ogr.GetDriverByName( driverName )
 if drv is None:
     print "%s driver not available.\n" % driverName
@@ -19,7 +18,7 @@ else:
     print  "%s driver IS available.\n" % driverName
 
 #Create the names
-fn = "points_les11.shp"
+fn = "points_les11.geojson"
 layername = "layer_les11"
 
 #Create a shapefile with the given name
@@ -59,7 +58,13 @@ print layer.GetExtent()
 
 ds.Destroy()
 
-qgis.utils.iface.addVectorLayer(fn, layername, "ogr") 
-aLayer = qgis.utils.iface.activeLayer()
-print aLayer.name()
+import folium
+import os
 
+pointsGeo=os.path.join("points_les11.geojson")
+map_points = folium.Map(location=[52,5.7],tiles='Mapbox Bright', zoom_start=6)
+map_points.choropleth(geo_path=pointsGeo)
+map_points.save('points_les11.html')
+
+bashCommand = "ogr2ogr -f kml -t_srs crs:84 points_les11.kml points_les11.geojson"
+os.system(bashCommand)
