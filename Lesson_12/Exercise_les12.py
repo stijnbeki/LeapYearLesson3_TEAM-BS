@@ -47,7 +47,7 @@ band5Arr=band5Arr.astype(np.float32)
 # set np.errstate to avoid warning of invalid values (i.e. NaN values) in the divide 
 def ndwi_calc(b4, b5):
     mask = np.greater(b4+b5,0)
-    with np.errstate(invalid='ignore'):
+    with np.errstate(invalid='ignore', divide = 'ignore'):
         ndwi = np.choose(mask,(-99,(b4-b5)/(b4+b5)))
         print "NDWI min and max values", ndwi.min(), ndwi.max()
         return ndwi 
@@ -86,10 +86,10 @@ dsll = gdal.Open("ndwi_ll.tif")
 # Read raster data
 ndwi = dsll.ReadAsArray(0, 0, dsll.RasterXSize, dsll.RasterYSize)
 
-# Now plot the raster data using gist_earth palette
+# Now plot the raster data using plt.cm.Blues pallette. Results in nice coloring
 plt.imshow(ndwi, interpolation='nearest', vmin=0, cmap=plt.cm.Blues)
-plt.show()
 plt.title("NDWI western part of the Netherlands")
 plt.colorbar()
+plt.show()
 
 dsll = None
