@@ -2,9 +2,8 @@
 """
 Created on Thu Jan 26 09:20:51 2017
 
-@author: ubuntu
+@author: TEAM BS
 """
-
 #team BS#
 #Bart Middelburg#
 #Stijn Beernink#
@@ -28,6 +27,7 @@ OAUTH_TOKEN_SECRET = '5GjzQUf9PtmmWHVPJUd5Ae2utcFWiVjhywnXF2n6A4OiR'
 ##initiating Twython object 
 twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
+
 search_results = twitter.search(q='ongeval',count=2000)
 
 outcome_coord = []
@@ -40,22 +40,13 @@ for tweet in search_results["statuses"]:
         full_place_name = tweet['place']['full_name']
         g = geocoder.google(full_place_name)
         outcome_coord.append(g.latlng)
-        text.append(str(tweettext))
+        text.append(tweettext)
     
-    print '==========================='
-
-df_plot= pd.Dataframe({'Coordinates': outcome_coord,
-                      'Tweet': text})
 
 import folium
 mapit = folium.Map( location=[52.2196884, 5.0936663], zoom_start=8 )
-for coord in outcome_coord:
-    folium.Marker( location=[ coord[0], coord[1] ]).add_to( mapit )
-
-mapit.save('map.html')
-
 for i in range(0,len(outcome_coord)):
-    folium.Marker( location=[ outcome_coord[i][0], outcome_coord[i][1] ]).add_to( mapit )
+    folium.Marker( location=[ outcome_coord[i][0], outcome_coord[i][1] ], popup = text[i]).add_to( mapit )
 
 mapit.save('map.html')
 
