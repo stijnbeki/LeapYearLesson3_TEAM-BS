@@ -1,0 +1,833 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_439571cfc1fd424cbb59be1c40ac23e9 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_439571cfc1fd424cbb59be1c40ac23e9" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_439571cfc1fd424cbb59be1c40ac23e9 = L.map('map_439571cfc1fd424cbb59be1c40ac23e9', {
+                                           center:[52.2196884,5.0936663],
+                                           zoom: 8,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_0ce8d06f194941cebf8e4e057aa1d001 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+
+        
+        
+            
+
+            var marker_ae04a9e4e71a498b9c49f2038bdd1026 = L.marker(
+                [51.2194475,4.4024643],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_e78f74fc22bb4465b2ae422fc8fd088b = L.marker(
+                [51.2162255,4.6624922],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_e491f97df2384633b321bd6036851637 = L.marker(
+                [50.59265,4.90365],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_05e35c211b6d45839fc792f1c936fb2a = L.marker(
+                [51.9266666,6.5806785],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_eae64d0a643b4ca0bb9adc1be347628b = L.marker(
+                [51.9266666,6.5806785],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_51d1948c187345d29ba1911dc767fcb7 = L.marker(
+                [52.19802,4.4199429],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_442e4613d3c4495db70c068b8ee4a070 = L.marker(
+                [51.6978162,5.3036748],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_46b45962a5024203b4bc67144fab3074 = L.marker(
+                [52.6012341,4.7004931],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_eddcab3efea34fdca258e5e709193efc = L.marker(
+                [52.6323813,4.7533754],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_47af86c19abb44cd8524265f8770f886 = L.marker(
+                [52.6426977,6.2006265],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_6b16bf5804714e55a26656593b1dae58 = L.marker(
+                [52.6426977,6.2006265],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_77394d802ad54976b67db62dea333946 = L.marker(
+                [52.6921234,6.1937187],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_c5c15acf85334b568bdc2d2da59cdf45 = L.marker(
+                [52.6426977,6.2006265],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_ebd6da4c9da74856940c9880e3864918 = L.marker(
+                [52.6323813,4.7533754],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_52c000a4fe384ec9a2957b8e68202b94 = L.marker(
+                [50.40604,4.28394],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_f1837bb8a33045e9b0b29621ca69920d = L.marker(
+                [50.59265,4.90365],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_2d74ff467b1340a7ba393df5f14924fc = L.marker(
+                [52.6012341,4.7004931],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_4e4b9581e259448fa651d46c59f86121 = L.marker(
+                [52.7415382,6.0493238],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_6107aa2e212e4ae092dc6fe64dd322b7 = L.marker(
+                [51.05983,4.36404],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+
+            var marker_59e8242376fd4ea4b592cc01aecf46a6 = L.marker(
+                [51.2194475,4.4024643],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_3e836f6c650c47799b48659d63c49a74 = L.popup({maxWidth: '300'});
+
+            
+                var html_5f2f125963f34643acda910353fbcd52 = $('         <div id="html_5f2f125963f34643acda910353fbcd52"                 style="width: 100.0%; height: 100.0%;">                 #R1/Ring Antwerpen Ring 2 (Nederland) ter hoogte van Antwerpen-Zuid Ongeval afgehandeld sinds 26/01/2017 17:45</div>                 ')[0];
+                popup_3e836f6c650c47799b48659d63c49a74.setContent(html_5f2f125963f34643acda910353fbcd52);
+            
+
+            marker_59e8242376fd4ea4b592cc01aecf46a6.bindPopup(popup_3e836f6c650c47799b48659d63c49a74);
+
+            
+        
+        
+            
+
+            var marker_54b6ab6c5286413e9ba16419be60353f = L.marker(
+                [51.2162255,4.6624922],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_86a917c5107f48f8ac2f3cd3f467fcef = L.popup({maxWidth: '300'});
+
+            
+                var html_6323f21a87014436b7b2c084699aa366 = $('         <div id="html_6323f21a87014436b7b2c084699aa366"                 style="width: 100.0%; height: 100.0%;">                 #E313 (A13) Ranst richting Lummen ter hoogte van Massenhoven Ongeval, Linkerrijstrook versperd sinds 26/01/2017 17:45</div>                 ')[0];
+                popup_86a917c5107f48f8ac2f3cd3f467fcef.setContent(html_6323f21a87014436b7b2c084699aa366);
+            
+
+            marker_54b6ab6c5286413e9ba16419be60353f.bindPopup(popup_86a917c5107f48f8ac2f3cd3f467fcef);
+
+            
+        
+        
+            
+
+            var marker_6fed70f662184cd0975eb473bc1c70a5 = L.marker(
+                [50.59265,4.90365],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_77db0e47328642119f7f582b93bb31c6 = L.popup({maxWidth: '300'});
+
+            
+                var html_463da2fad5f6495a81ebb0f981a84b40 = $('         <div id="html_463da2fad5f6495a81ebb0f981a84b40"                 style="width: 100.0%; height: 100.0%;">                 #E411 (A4) Brussel richting Namen ter hoogte van Eghezée Ongeval afgehandeld sinds 26/01/2017 17:44</div>                 ')[0];
+                popup_77db0e47328642119f7f582b93bb31c6.setContent(html_463da2fad5f6495a81ebb0f981a84b40);
+            
+
+            marker_6fed70f662184cd0975eb473bc1c70a5.bindPopup(popup_77db0e47328642119f7f582b93bb31c6);
+
+            
+        
+        
+            
+
+            var marker_ec1c1f6dcfe94945aeb1056793c733da = L.marker(
+                [51.9266666,6.5806785],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_1ed0ab28c2714f44822e420b50a67fb8 = L.popup({maxWidth: '300'});
+
+            
+                var html_3a268b8f40a64236aaaad3b6b40f1bd1 = $('         <div id="html_3a268b8f40a64236aaaad3b6b40f1bd1"                 style="width: 100.0%; height: 100.0%;">                 #DINXPERLO #MON | P 1 Ongeval Wegvervoer Letsel Hogestraat Dinxperlo | https://t.co/LcFoJRYduH</div>                 ')[0];
+                popup_1ed0ab28c2714f44822e420b50a67fb8.setContent(html_3a268b8f40a64236aaaad3b6b40f1bd1);
+            
+
+            marker_ec1c1f6dcfe94945aeb1056793c733da.bindPopup(popup_1ed0ab28c2714f44822e420b50a67fb8);
+
+            
+        
+        
+            
+
+            var marker_363baf0f38bd457ab69cd629f4a1a828 = L.marker(
+                [51.9266666,6.5806785],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_1789cabe47834e83a50e25a1d864ac20 = L.popup({maxWidth: '300'});
+
+            
+                var html_932d9dcf9a86465992fb8fbf1f11ed92 = $('         <div id="html_932d9dcf9a86465992fb8fbf1f11ed92"                 style="width: 100.0%; height: 100.0%;">                 P 1 Ongeval Wegvervoer Letsel Hogestraat Dinxperlo</div>                 ')[0];
+                popup_1789cabe47834e83a50e25a1d864ac20.setContent(html_932d9dcf9a86465992fb8fbf1f11ed92);
+            
+
+            marker_363baf0f38bd457ab69cd629f4a1a828.bindPopup(popup_1789cabe47834e83a50e25a1d864ac20);
+
+            
+        
+        
+            
+
+            var marker_cfd8cd4c853147b4a6a46139b9b0b316 = L.marker(
+                [52.19802,4.4199429],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_57fa4a2be1f14cbe8d6f08e661418d10 = L.popup({maxWidth: '300'});
+
+            
+                var html_43e6a20fef2340cd970c1074faca514b = $('         <div id="html_43e6a20fef2340cd970c1074faca514b"                 style="width: 100.0%; height: 100.0%;">                 #KATWIJKZH #HLM | Prio 1 Westerbaan KWK Wegvervoer ongeval letsel | https://t.co/R0o5GYc6re</div>                 ')[0];
+                popup_57fa4a2be1f14cbe8d6f08e661418d10.setContent(html_43e6a20fef2340cd970c1074faca514b);
+            
+
+            marker_cfd8cd4c853147b4a6a46139b9b0b316.bindPopup(popup_57fa4a2be1f14cbe8d6f08e661418d10);
+
+            
+        
+        
+            
+
+            var marker_189d3e6cf1f1406c9edaa43b2e1ce7a7 = L.marker(
+                [51.6978162,5.3036748],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_188e664159fc49f6a2464c60d993a9ab = L.popup({maxWidth: '300'});
+
+            
+                var html_2f9acdca2699432db795de6a45ce512e = $('         <div id="html_2f9acdca2699432db795de6a45ce512e"                 style="width: 100.0%; height: 100.0%;">                 #ROSMALEN #BBN | Ongeval wegvervoer letsel A2 N 115,6 Rosmalen | https://t.co/G94wmECHe3</div>                 ')[0];
+                popup_188e664159fc49f6a2464c60d993a9ab.setContent(html_2f9acdca2699432db795de6a45ce512e);
+            
+
+            marker_189d3e6cf1f1406c9edaa43b2e1ce7a7.bindPopup(popup_188e664159fc49f6a2464c60d993a9ab);
+
+            
+        
+        
+            
+
+            var marker_e1edea4a88e44e99a73af4db1bb0ed02 = L.marker(
+                [52.6012341,4.7004931],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_8a27d66be2a54e43826f51dc574ed72f = L.popup({maxWidth: '300'});
+
+            
+                var html_d9f53b9bd8fd4cf3994b1a3b38300133 = $('         <div id="html_d9f53b9bd8fd4cf3994b1a3b38300133"                 style="width: 100.0%; height: 100.0%;">                 #alarm Ongeval Materieel A9 L Heiloo - A9 hmp 68.0</div>                 ')[0];
+                popup_8a27d66be2a54e43826f51dc574ed72f.setContent(html_d9f53b9bd8fd4cf3994b1a3b38300133);
+            
+
+            marker_e1edea4a88e44e99a73af4db1bb0ed02.bindPopup(popup_8a27d66be2a54e43826f51dc574ed72f);
+
+            
+        
+        
+            
+
+            var marker_1a39bbf7eb6c4436b095d6e38de7fa81 = L.marker(
+                [52.6323813,4.7533754],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_c5f3ac3ab82042808ffa6478c7382d4c = L.popup({maxWidth: '300'});
+
+            
+                var html_04b77ae6c72f408cb0f468cdd2ad29bc = $('         <div id="html_04b77ae6c72f408cb0f468cdd2ad29bc"                 style="width: 100.0%; height: 100.0%;">                 #alarm Ongeval Materieel Van Ostadelaan Alkmaar - Van Ostadelaan 196, 1816 JE Alkmaar, Netherlands</div>                 ')[0];
+                popup_c5f3ac3ab82042808ffa6478c7382d4c.setContent(html_04b77ae6c72f408cb0f468cdd2ad29bc);
+            
+
+            marker_1a39bbf7eb6c4436b095d6e38de7fa81.bindPopup(popup_c5f3ac3ab82042808ffa6478c7382d4c);
+
+            
+        
+        
+            
+
+            var marker_b654abfcbebb4346b9918ab9bb39fa4b = L.marker(
+                [52.6426977,6.2006265],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_a69f8f07d07c4ad7bb104430f5061242 = L.popup({maxWidth: '300'});
+
+            
+                var html_a16ee33b13494835a425ad14bf17d831 = $('         <div id="html_a16ee33b13494835a425ad14bf17d831"                 style="width: 100.0%; height: 100.0%;">                 #alarm P1 Ongeval Wegvervoer Letsel A28 R 115,0 Staphorst - E232, 7951 Staphorst, Netherlands</div>                 ')[0];
+                popup_a69f8f07d07c4ad7bb104430f5061242.setContent(html_a16ee33b13494835a425ad14bf17d831);
+            
+
+            marker_b654abfcbebb4346b9918ab9bb39fa4b.bindPopup(popup_a69f8f07d07c4ad7bb104430f5061242);
+
+            
+        
+        
+            
+
+            var marker_481c0cf7610f4acc9cfa0e864492e648 = L.marker(
+                [52.6426977,6.2006265],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_499e55eb92b444a4b3a6a30c5d51680e = L.popup({maxWidth: '300'});
+
+            
+                var html_08922fa949f342c6ab366c8924a52d42 = $('         <div id="html_08922fa949f342c6ab366c8924a52d42"                 style="width: 100.0%; height: 100.0%;">                 PRIO 1 Ongeval Wegvervoer Letsel A28 R 115,0 Staphorst https://t.co/jkUPnPS0AG #112overijssel</div>                 ')[0];
+                popup_499e55eb92b444a4b3a6a30c5d51680e.setContent(html_08922fa949f342c6ab366c8924a52d42);
+            
+
+            marker_481c0cf7610f4acc9cfa0e864492e648.bindPopup(popup_499e55eb92b444a4b3a6a30c5d51680e);
+
+            
+        
+        
+            
+
+            var marker_d08435b0ea2447ae9c9c39aa7344dc95 = L.marker(
+                [52.6921234,6.1937187],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_46884b66fc114511b7cbd0105c4fe3f6 = L.popup({maxWidth: '300'});
+
+            
+                var html_d80464784f424d8a86682249ff0e3a6c = $('         <div id="html_d80464784f424d8a86682249ff0e3a6c"                 style="width: 100.0%; height: 100.0%;">                 #STAPHORST #MON | P 1 Ongeval Wegvervoer Letsel A28 R 115,0 Staphorst | https://t.co/efi2yFOYNF</div>                 ')[0];
+                popup_46884b66fc114511b7cbd0105c4fe3f6.setContent(html_d80464784f424d8a86682249ff0e3a6c);
+            
+
+            marker_d08435b0ea2447ae9c9c39aa7344dc95.bindPopup(popup_46884b66fc114511b7cbd0105c4fe3f6);
+
+            
+        
+        
+            
+
+            var marker_8871466c4fd246758b3317366d1be3aa = L.marker(
+                [52.6426977,6.2006265],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_c42c795a252243768f95860f1cf6e252 = L.popup({maxWidth: '300'});
+
+            
+                var html_04306e0147864d7aa80cd3564e001391 = $('         <div id="html_04306e0147864d7aa80cd3564e001391"                 style="width: 100.0%; height: 100.0%;">                 P 1 Ongeval Wegvervoer Letsel A28 R 115,0 Staphorst</div>                 ')[0];
+                popup_c42c795a252243768f95860f1cf6e252.setContent(html_04306e0147864d7aa80cd3564e001391);
+            
+
+            marker_8871466c4fd246758b3317366d1be3aa.bindPopup(popup_c42c795a252243768f95860f1cf6e252);
+
+            
+        
+        
+            
+
+            var marker_9c2927b4ad234979b5abdb9ecbe50a2d = L.marker(
+                [52.6323813,4.7533754],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_1863da1dc28b4d7189517fa4042939fe = L.popup({maxWidth: '300'});
+
+            
+                var html_d5d51844c6ae486faacab1cc285193e5 = $('         <div id="html_d5d51844c6ae486faacab1cc285193e5"                 style="width: 100.0%; height: 100.0%;">                 #ALKMAAR #NHN | Ongeval Materieel Van Ostadelaan Alkmaar | https://t.co/Mjha4ojnU6</div>                 ')[0];
+                popup_1863da1dc28b4d7189517fa4042939fe.setContent(html_d5d51844c6ae486faacab1cc285193e5);
+            
+
+            marker_9c2927b4ad234979b5abdb9ecbe50a2d.bindPopup(popup_1863da1dc28b4d7189517fa4042939fe);
+
+            
+        
+        
+            
+
+            var marker_0fb7005cb6c7480d84f696824051d7c6 = L.marker(
+                [50.40604,4.28394],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_4bc73993f98b4c269e07c0aae62b21b4 = L.popup({maxWidth: '300'});
+
+            
+                var html_a659fca53af24046bc7feaef11186b31 = $('         <div id="html_a659fca53af24046bc7feaef11186b31"                 style="width: 100.0%; height: 100.0%;">                 #N54 Fontaine-l&#39;Evêque richting Erquelinnes ter hoogte van Anderlues Ongeval, Rechterrijstrook versperd sinds 26/01/2017 17:09</div>                 ')[0];
+                popup_4bc73993f98b4c269e07c0aae62b21b4.setContent(html_a659fca53af24046bc7feaef11186b31);
+            
+
+            marker_0fb7005cb6c7480d84f696824051d7c6.bindPopup(popup_4bc73993f98b4c269e07c0aae62b21b4);
+
+            
+        
+        
+            
+
+            var marker_aff9bb0adf9640319810bdf893b7f38b = L.marker(
+                [50.59265,4.90365],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_ee13f4aea3a841f7ae024bb7b8a54fbd = L.popup({maxWidth: '300'});
+
+            
+                var html_49ae5ef093f54344a54202fa5be74f4b = $('         <div id="html_49ae5ef093f54344a54202fa5be74f4b"                 style="width: 100.0%; height: 100.0%;">                 #E411 (A4) Brussel richting Namen ter hoogte van Eghezée Ongeval, Linkerrijstrook versperd sinds 26/01/2017 17:04</div>                 ')[0];
+                popup_ee13f4aea3a841f7ae024bb7b8a54fbd.setContent(html_49ae5ef093f54344a54202fa5be74f4b);
+            
+
+            marker_aff9bb0adf9640319810bdf893b7f38b.bindPopup(popup_ee13f4aea3a841f7ae024bb7b8a54fbd);
+
+            
+        
+        
+            
+
+            var marker_c5c78e43718240f8891a156e485f7e6a = L.marker(
+                [52.6012341,4.7004931],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_ce7531d7b53845e58e35f0f1ffdf015b = L.popup({maxWidth: '300'});
+
+            
+                var html_6cc4936b03bf4a9eac8990c0096bfe54 = $('         <div id="html_6cc4936b03bf4a9eac8990c0096bfe54"                 style="width: 100.0%; height: 100.0%;">                 #HEILOO #NHN | Ongeval Materieel A9 L Heiloo | https://t.co/IEgUASfdJI</div>                 ')[0];
+                popup_ce7531d7b53845e58e35f0f1ffdf015b.setContent(html_6cc4936b03bf4a9eac8990c0096bfe54);
+            
+
+            marker_c5c78e43718240f8891a156e485f7e6a.bindPopup(popup_ce7531d7b53845e58e35f0f1ffdf015b);
+
+            
+        
+        
+            
+
+            var marker_579bcf0d9b6b41efac363c81c7d10130 = L.marker(
+                [52.7415382,6.0493238],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_e68f95193c4547bd99daf5dd066fa7a4 = L.popup({maxWidth: '300'});
+
+            
+                var html_e939264d64f34b4d89f83796f24abe47 = $('         <div id="html_e939264d64f34b4d89f83796f24abe47"                 style="width: 100.0%; height: 100.0%;">                 #alarm P1 Ongeval Wegvervoer Letsel Vendelweg Schansweg Steenwijk - Schansweg, 8331 Steenwijk, Netherlands</div>                 ')[0];
+                popup_e68f95193c4547bd99daf5dd066fa7a4.setContent(html_e939264d64f34b4d89f83796f24abe47);
+            
+
+            marker_579bcf0d9b6b41efac363c81c7d10130.bindPopup(popup_e68f95193c4547bd99daf5dd066fa7a4);
+
+            
+        
+        
+            
+
+            var marker_f137fc539cfd4d67965279a01e364e2a = L.marker(
+                [51.05983,4.36404],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_439571cfc1fd424cbb59be1c40ac23e9);
+            
+        
+            
+            var popup_dd085bc4d4c44efb8a82243ef22b84f0 = L.popup({maxWidth: '300'});
+
+            
+                var html_ada73fe72e1f4388903509b3a027418a = $('         <div id="html_ada73fe72e1f4388903509b3a027418a"                 style="width: 100.0%; height: 100.0%;">                 #A12 Boom richting Brussel ter hoogte van Rupel-Kanaalzone Ongeval afgehandeld sinds 26/01/2017 16:53</div>                 ')[0];
+                popup_dd085bc4d4c44efb8a82243ef22b84f0.setContent(html_ada73fe72e1f4388903509b3a027418a);
+            
+
+            marker_f137fc539cfd4d67965279a01e364e2a.bindPopup(popup_dd085bc4d4c44efb8a82243ef22b84f0);
+
+            
+        
+        
+        
+        </script>
+        
